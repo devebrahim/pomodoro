@@ -10,10 +10,12 @@
 <body>
     <div class="container">
         <div class="topmenu">
-            <h2>00pomofocus</h2>
-            <button class="headButton" type="button">11login</button>
-            <button class="headButton" type="button">22setting</button>
-            <button class="headButton" type="button">33report</button>
+            pomofocus
+            <span class="headButton">
+              <button class="headButton_btn" type="button">report</button>
+              <button class="headButton_btn" type="button">setting</button>
+              <button class="headButton_btn" type="button">login</button>
+            </span>
         </div>
         <div class="rootbox">
             <div class="btnTypeTimer">
@@ -22,10 +24,9 @@
                 <button type="button">Long Break</button>
             </div>
             <div class="timerRoot">
-                <!-- {{minit}}:{{timeLeft}} -->
-                <!-- (click)="startTimer()" -->
+                {{minit}}:{{timeLeft}}
             </div>
-            <button class="btnStart">START</button>
+            <button class="btnStart" (click)="startTimer()">START</button>
         </div>
         <div class="topOfAddTasks">
             <div class="taskname-top">
@@ -35,11 +36,12 @@
             </div>
             <div class="addedTaskList">
                 Tasks
-                <button type="menu">1</button>
+                <button type="menu"></button>
             </div>
         </div>
         <div class="addedTask"><button type="button">Add Task</button></div>
     </div>
+
 </body>
 
 </html>
