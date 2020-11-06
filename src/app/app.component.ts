@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Time } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import { Observable, observable, TimeInterval } from 'rxjs';
+import { timer, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
