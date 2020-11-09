@@ -32,16 +32,25 @@
             <div class="taskname-top">
                 <p>Time to work!</p>
                 <p hidden> WORKING ON</p>
-                <label hidden></label>
             </div>
             <div class="addedTaskList">
                 Tasks
                 <button type="menu"></button>
             </div>
         </div>
-        <div class="addedTask"><button type="button">Add Task</button></div>
-    </div>
+        <div class="addedTask" *ngIf="!test"><button type="button " (click)="addedTask() ">Add Task</button></div>
+    </div><br>
+    <div class="inputbox_task" *ngIf="test">
+        <div class=" inputbox_task_information ">
+            <input type="text " placeholder="what are you working on "><br><br> Est Pomodoros
+            <div class="inputbox_task_EstPomodoros ">
+                <input type="number " placeholder="1" min="0" max="4"></div>
+            <button class="Increase">S</button>
+            <button class="Decrease">F</button>
 
+        </div>
+        <div class="inputbox_task_footer "></div>
+    </div>
 </body>
 
 </html>

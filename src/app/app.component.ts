@@ -9,13 +9,26 @@ import { timer, Subscription } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  test:boolean=false;
   title = 'pomodoro-project';
   II:number=  5
   timeLeft: number = 60;
   minit: number = 2;
   interval;
   interval2;
-  constructor() {}
+  constructor() {
+    
+  }
+  addedTask(){
+    this.test=true
+    alert("ok")
+  }
+  
+  outofTask(){
+    if (this.test=true) {
+    this.test=false
+    alert("ok2") 
+    }}
   startTimer() {
     this.interval = setInterval(() => {
        if(this.timeLeft > 55) {
@@ -26,7 +39,7 @@ export class AppComponent implements OnInit {
       },1000)  
     this.interval2 = setInterval(() => {
       if(this.timeLeft==56 && this.minit==0) {
-       alert("ghe");
+       alert("end");
        clearInterval(this.interval)
        clearInterval(this.interval2)
      }
